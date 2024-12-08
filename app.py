@@ -1,13 +1,13 @@
-import gradio as gr
 import cv2
+import gradio as gr
 import numpy as np
 import os
-from PIL import Image
+import tempfile
 import torch
 import torch.nn.functional as F
-from torchvision.transforms import Compose
-import tempfile
+from PIL import Image
 from gradio_imageslider import ImageSlider
+from torchvision.transforms import Compose
 
 from depth_anything.dpt import DepthAnything
 from depth_anything.util.transform import Resize, NormalizeImage, PrepareForNet

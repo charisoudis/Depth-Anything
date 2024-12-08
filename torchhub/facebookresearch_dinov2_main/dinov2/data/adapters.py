@@ -4,9 +4,8 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-from typing import Any, Tuple
-
 from torch.utils.data import Dataset
+from typing import Any, Tuple
 
 
 class DatasetWithEnumeratedTargets(Dataset):

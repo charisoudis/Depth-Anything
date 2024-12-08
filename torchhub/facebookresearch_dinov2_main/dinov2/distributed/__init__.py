@@ -8,10 +8,9 @@ import os
 import random
 import re
 import socket
-from typing import Dict, List
-
 import torch
 import torch.distributed as dist
+from typing import Dict, List
 
 _LOCAL_RANK = -1
 _LOCAL_WORLD_SIZE = -1

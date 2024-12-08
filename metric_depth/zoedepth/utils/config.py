@@ -24,12 +24,10 @@
 
 import json
 import os
-
-from zoedepth.utils.easydict import EasyDict as edict
-
-from zoedepth.utils.arg_utils import infer_type
 import pathlib
 import platform
+from zoedepth.utils.arg_utils import infer_type
+from zoedepth.utils.easydict import EasyDict as edict
 
 ROOT = pathlib.Path(__file__).parent.parent.resolve()
 

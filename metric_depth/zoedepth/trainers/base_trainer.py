@@ -22,21 +22,19 @@
 
 # File author: Shariq Farooq Bhat
 
-import os
-import uuid
-import warnings
-from datetime import datetime as dt
-from typing import Dict
-
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 import torch
 import torch.distributed as dist
 import torch.nn as nn
 import torch.optim as optim
+import uuid
 import wandb
+import warnings
+from datetime import datetime as dt
 from tqdm import tqdm
-
+from typing import Dict
 from zoedepth.utils.config import flatten
 from zoedepth.utils.misc import RunningAverageDict, colorize, colors
 

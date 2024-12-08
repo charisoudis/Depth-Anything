@@ -24,21 +24,19 @@
 
 # This file is partly inspired from BTS (https://github.com/cleinc/bts/blob/master/pytorch/bts_dataloader.py); author: Jin Han Lee
 
+import cv2
 import itertools
+import numpy as np
 import os
 import random
-
-import numpy as np
-import cv2
 import torch
 import torch.nn as nn
 import torch.utils.data.distributed
-from zoedepth.utils.easydict import EasyDict as edict
 from PIL import Image, ImageOps
 from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
-
 from zoedepth.utils.config import change_dataset
+from zoedepth.utils.easydict import EasyDict as edict
 
 from .ddad import get_ddad_loader
 from .diml_indoor_test import get_diml_indoor_loader
@@ -46,11 +44,10 @@ from .diml_outdoor_test import get_diml_outdoor_loader
 from .diode import get_diode_loader
 from .hypersim import get_hypersim_loader
 from .ibims import get_ibims_loader
+from .preprocess import CropParams, get_white_border, get_black_border
 from .sun_rgbd_loader import get_sunrgbd_loader
 from .vkitti import get_vkitti_loader
 from .vkitti2 import get_vkitti2_loader
-
-from .preprocess import CropParams, get_white_border, get_black_border
 
 
 def _is_pil_image(img):

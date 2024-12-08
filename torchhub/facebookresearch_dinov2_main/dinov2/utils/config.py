@@ -4,17 +4,14 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-import math
-import logging
-import os
-
-from omegaconf import OmegaConf
-
 import dinov2.distributed as distributed
+import logging
+import math
+import os
+from dinov2.configs import dinov2_default_config
 from dinov2.logging import setup_logging
 from dinov2.utils import utils
-from dinov2.configs import dinov2_default_config
-
+from omegaconf import OmegaConf
 
 logger = logging.getLogger("dinov2")
 

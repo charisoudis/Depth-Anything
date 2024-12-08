@@ -4,13 +4,13 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
+import dinov2.distributed as distributed
 import functools
 import logging
 import os
 import sys
 from typing import Optional
 
-import dinov2.distributed as distributed
 from .helpers import MetricLogger, SmoothedValue
 
 
